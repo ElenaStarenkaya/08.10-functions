@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <p id="Log"></p> -->
+
+    <script>
+
+        // function prepareStr() {
+        //     str = "This string was prepared by function";
+        // }
+        // prepareStr();
+        // Log.innerHTML = "str= " + str;
+
+        // var x;
+        // function showHoisting() {
+        //     // console.log("x before declaration: " + x);
+        //     // x=2;
+        //     // var x = 2;
+        //     let x=2;
+        //     console.log("x after declaration: " + x);
+        // }
+        // showHoisting();
+        // console.log("x after function: " + x);
+
+
+        var str = "", N, count = 0, sum = 0;
+
+        //1
+        // function stringFrom() {
+        //     for (i = 0; i < arguments.length; i++)
+        //     if(i!=arguments.length-1)
+        //         str += String(arguments[i]) + " ";
+        //         else
+        //         str += String(arguments[i]);
+        //     return str;
+        // }
+        // console.log(stringFrom("Я", "купил", 5, "яблок"));
+
+        //2
+        // function minValue() {
+        //     if (arguments.length == 0)
+        //         return undefined; // либо:   return "вы ввели нулевое значение"
+        //     min = arguments[0];
+        //     for (i = 1; i < arguments.length; i++)
+        //         if (arguments[i] < min)
+        //             min = arguments[i];
+        //     return min;
+        // }
+        // console.log(minValue());
+
+        //3 Подсчет числовых значений
+        // function numbers() {
+        //     for (i = 0; i < arguments.length; i++)
+        //         if (typeof(arguments[i]) == "number")
+        //             count++;
+        //     return count;
+        // }
+        // console.log("Количество числовых аргументов - " + numbers(5, "t", true, 9, "9"));
+        // count=0;
+
+        //4 Среднее значение только числовых аргументов
+        // function mean() {
+        //     for (i = 0; i < arguments.length; i++)
+        //         if (typeof (arguments[i]) == "number") {
+        //             count++;
+        //             sum += arguments[i];
+        //         }
+        //     return sum / count;
+        // }
+        // console.log("Количество числовых аргументов - " + mean(5, "t", true, 9, "9"));
+        // count=0;
+        // sum=0;
+
+        //5
+        // function powerOfTwo(x) {
+        //     if (x == 1)
+        //         return true;
+        //     if (x % 2 == 0)
+        //         return powerOfTwo(x / 2);
+        //     return false;
+        // }
+        // if (powerOfTwo(8))
+        //     console.log("Число является степенью двойки");
+        // else
+        //     console.log("Число не является степенью двойки");
+        // console.log(powerOfTwo(8));
+
+        //6
+        N = +prompt("Введите число");
+        function rightToLeft(x) {
+            if (x>=10){
+            str+= String(x%10);
+            rightToLeft(Math.floor(x/10));
+        }
+        else
+        str +=x;
+        }
+        rightToLeft(N);
+        alert(str);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
